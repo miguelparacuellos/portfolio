@@ -1,9 +1,12 @@
 import ProfileImgSrc from "assets/Profile.jpeg";
 import {
+  AuthorName,
   ContentWrapper,
+  Gretting,
   HomeWrapper,
   PersonalInfoWrapper,
   ProfileImg,
+  ShortBio,
 } from "./styles";
 
 const Home = () => {
@@ -12,8 +15,12 @@ const Home = () => {
       <ContentWrapper>
         <ProfileImg src={ProfileImgSrc} alt="Author profile's image" />
         <PersonalInfoWrapper>
-          <h1>Hi! I'm Miguel Paracuellos</h1>
-          <p>A Junior Frontend developer</p>
+          <Gretting>Hi there!</Gretting>
+          <AuthorName>I'm Miguel Paracuellos</AuthorName>
+          <ShortBio>
+            A Front-End Web Developer passionate about creating interactive
+            applications and experiences on the web.
+          </ShortBio>
         </PersonalInfoWrapper>
       </ContentWrapper>
     </HomeWrapper>
