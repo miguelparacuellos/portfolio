@@ -1,5 +1,6 @@
 // Shared internal imports
 import logo from "assets/WhiteLogo.png";
+import { Link } from "react-router-dom";
 
 // Internal imports
 import {
@@ -12,7 +13,11 @@ import {
 
 const Header = () => {
   // RENDERERS
-  const renderHeaderTopSide = () => <Logo src={logo} alt="Author's icon" />;
+  const renderHeaderTopSide = () => (
+    <Link to="/">
+      <Logo src={logo} alt="Author's icon" />
+    </Link>
+  );
 
   const renderHeaderBottomSide = () => (
     <BottomWrapper>
