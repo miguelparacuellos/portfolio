@@ -1,42 +1,51 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const HeaderWrapper = styled.header`
+export const HeaderWrapper = styled.div`
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
+  flex-flow: column wrap;
+  row-gap: 2rem;
 
-  padding: 1rem 2rem;
-
-  background-color: #03a9f4;
+  background-color: #0d47a1;
 `;
 
 export const Logo = styled.img`
   height: 3rem;
+  margin: 1.5rem;
 `;
 
-export const NavBarWrapper = styled.nav`
-  display: flex;
-  flex-flow: row wrap;
+export const BottomWrapper = styled.div`
+  flex-grow: 1;
 
-  justify-content: space-around;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+`;
+
+export const NavWrapper = styled.div`
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
   align-items: center;
+  row-gap: 1.5rem;
 `;
 
 export const NavItem = styled(Link)`
-  padding: 0.5rem 2rem;
-
-  text-decoration: none;
   color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+
+  padding: 0.75rem;
+
+  border: 1px solid #0d47a1;
 
   &:hover,
-  active {
-    border: 1px solid white;
-    border-radius: 5px;
+  &:active {
+    border: 1px solid #e3f2fd;
+    border-radius: 15px;
   }
 
   &:active {
-    background-color: #4fc3f7;
+    background-color: #42a5f5;
   }
 `;
