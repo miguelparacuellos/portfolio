@@ -33,11 +33,7 @@ const Home = () => {
           Resumé
         </CVFile>
       </ResumeButton>
-      <LinkedInButton
-        size={24}
-        color="#0d47a1"
-        onClick={handleOpenLinkedin}
-      ></LinkedInButton>
+      <LinkedInButton size={24} color="#0d47a1" onClick={handleOpenLinkedin} />
       <GithubButton size={24} color="#0d47a1" onClick={handleOpenGithub} />
     </InfoLinksWrapper>
   );
