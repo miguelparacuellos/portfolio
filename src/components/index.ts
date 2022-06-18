@@ -1,4 +1,6 @@
-import Header from "./Header/Header";
-import Card from "./Card/Card";
+import Card from "./Card";
+import Header from "./Header";
+import Flex from "./Flex";
+import ProgressBar from "./Progress/ProgressBar";
 
-export { Header, Card };
+export { Header, Card, Flex, ProgressBar };

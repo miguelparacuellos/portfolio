@@ -1,28 +1,24 @@
+import { Flex } from "components";
 import styled from "styled-components";
 
-export const SkillsWrapper = styled.div`
+export const SkillsWrapper = styled(Flex)`
   flex-grow: 1;
-
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 1rem;
-`;
-
-export const Section = styled.div`
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
 `;
 
 export const Title = styled.h1`
-  font-size: 3rem;
+  font-size: 2.5rem;
 `;
 
-export const SkillsRow = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+export const Section = styled(Flex)`
+  width: 100%;
+`;
+
+export const WhiteCard = styled(Flex)`
+  width: 60%;
+
+  background-color: white;
+  padding: 1rem 2rem;
+
+  border-radius: 10rem;
+  border: 1px solid #0d47a1;
 `;

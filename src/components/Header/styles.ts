@@ -6,7 +6,7 @@ export const HeaderWrapper = styled.div`
   flex-flow: column wrap;
   row-gap: 2rem;
 
-  background-color: #0d47a1;
+  background-image: linear-gradient(to right top, #2962ff, #0d47a1);
 `;
 
 export const Logo = styled.img`
@@ -37,7 +37,7 @@ export const NavItem = styled(Link)`
 
   padding: 0.75rem;
 
-  border: 1px solid #0d47a1;
+  border: 1px solid transparent;
 
   &:hover,
   &:active {

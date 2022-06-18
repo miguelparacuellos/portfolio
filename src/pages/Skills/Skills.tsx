@@ -1,29 +1,45 @@
 // Shared internal imports
-import { Card } from "components";
 
 // Internal imports
-import { Section, SkillsRow, SkillsWrapper, Title } from "./styles";
+import { Flex } from "components";
+import { Section, SkillsWrapper, Title, WhiteCard } from "./styles";
+import { MainSkillRowParams } from "./ts";
 
 const Skills = () => {
   // RENDERERS
+  const renderMainSkillRow = ({ title }: MainSkillRowParams) => (
+    <Flex>
+      <h2>{title}</h2>
+    </Flex>
+  );
+
   const renderMainSkills = () => (
-    <Section>
-      <Title>Main Skills</Title>
-      <Card backgroundColor="white">
-        <SkillsRow>
-          <h2>React</h2>
-        </SkillsRow>
-        <SkillsRow>
-          <h2>Typescript</h2>
-        </SkillsRow>
-        <SkillsRow>
-          <h2>NodeJS</h2>
-        </SkillsRow>
-      </Card>
+    <Section
+      flexFlow="column wrap"
+      alignItems="center"
+      justifyContent="space-around"
+    >
+      <Title>Main skills</Title>
+      <WhiteCard flexFlow="column wrap" alignItems="center" columnGap="1rem">
+        {renderMainSkillRow({
+          title: "React",
+          percentage: 85,
+          startColor: "#78909c",
+          endColor: "#546e7a",
+        })}
+      </WhiteCard>
     </Section>
   );
 
-  return <SkillsWrapper>{renderMainSkills()}</SkillsWrapper>;
+  return (
+    <SkillsWrapper
+      flexFlow="column wrap"
+      alignItems="center"
+      justifyContent="space-around"
+    >
+      {renderMainSkills()}
+    </SkillsWrapper>
+  );
 };
 
 export default Skills;

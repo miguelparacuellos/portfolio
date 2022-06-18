@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { ContainerProps } from "./ts";
 
-export const Container = styled.div<ContainerProps>`
+const Card = styled.div<ContainerProps>`
   display: flex;
   ${({ flexFlow }) => (flexFlow ? `flex-flow: ${flexFlow}` : "")}
   ${({ justifyContent }) =>
@@ -16,3 +16,5 @@ export const Container = styled.div<ContainerProps>`
   ${({ backgroundColor }) =>
     backgroundColor ? `background-color: ${backgroundColor}` : ""}
 `;
+
+export default Card;
